@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chill — Register</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span><span>Chill</span></div>
+      <nav class="menu" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="login.html">Login</a>
+        <a class="current" href="register.html" aria-current="page">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-wrap">
+    <form class="form" action="/auth/register" method="post" autocomplete="on">
+      <h1>Daftar</h1>
+      <p>Buat akun baru ✨</p>
+
+      <div class="row">
+        <label for="user">Username</label>
+        <input class="input" id="user" name="user" type="text" required placeholder="username" autocomplete="username" />
+      </div>
+
+      <div class="row">
+        <label for="email">Email</label>
+        <input class="input" id="email" name="email" type="email" required placeholder="kamu@contoh.com" autocomplete="email" />
+      </div>
+
+      <div class="row">
+        <label for="pwd">Kata sandi</label>
+        <input class="input" id="pwd" name="pwd" type="password" required minlength="8" placeholder="Minimal 8 karakter" autocomplete="new-password" />
+      </div>
+
+      <div class="row">
+        <label for="confirm">Konfirmasi kata sandi</label>
+        <input class="input" id="confirm" name="confirm" type="password" required minlength="8" placeholder="Ulangi kata sandi" autocomplete="new-password" />
+      </div>
+
+      <button class="btn" type="submit">Daftar</button>
+      <div style="height:10px"></div>
+      <button class="btn-google" type="button"><span class="g-logo"></span> Daftar dengan Google</button>
+
+      <div class="muted">Sudah punya akun? <a href="login.html">Masuk</a></div>
+    </form>
+  </main>
+
+  <footer><div class="container">© 2025 Chill.</div></footer>
+</body>
+</html>

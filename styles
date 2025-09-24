@@ -1,0 +1,96 @@
+/* === CHILL — GRID 12 ala Figma (container 1200px, gutter 24px) === */
+:root{
+  --container: 1200px;
+  --gutter: 24px;
+  --bg:#0b0f14;         /* deep navy */
+  --bg-2:#101722;       /* card */
+  --line:#1e2a3a;       /* stroke */
+  --text:#e7edf5;
+  --muted:#93a6bd;
+  --accent:#c7f94f;     /* lime */
+  --accent-2:#9fe02f;
+  --white:#fff; --black:#0a0a0a;
+}
+
+/* Reset ringkas */
+*{box-sizing:border-box} html,body{height:100%}
+body{
+  margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 800px at 20% 10%, #0f1520 30%, var(--bg) 70%) fixed;
+}
+
+/* Container & GRID 12 */
+.container{max-width:var(--container); margin:0 auto; padding:0 16px}
+.grid-12{display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:var(--gutter)}
+@media (max-width:1023px){ .grid-12{grid-template-columns:repeat(8,1fr)} }
+@media (max-width:639px){  .grid-12{grid-template-columns:repeat(4,1fr)} }
+
+/* Header */
+.header{
+  position:sticky; top:0; z-index:10;
+  background:linear-gradient(180deg, #0c121b, #0c121b99 70%, transparent);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.4px}
+.brand .dot{width:12px; height:12px; border-radius:999px; background:var(--accent)}
+.menu{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.menu a{
+  color:var(--text); text-decoration:none; font-weight:700; padding:10px 12px; border-radius:10px;
+}
+.menu a.current, .menu a:hover{background:#0f1623; border:1px solid var(--line)}
+.avatar{width:32px;height:32px;border-radius:999px;border:1px solid var(--line);
+  background:#ddd url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="12" r="6" fill="%239aa6b2"/><path d="M4 28c2.5-6 25.5-6 24 0" fill="%239aa6b2"/></svg>') center/cover no-repeat}
+
+/* Hero */
+.kicker{color:var(--accent); font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:12px}
+h1{margin:8px 0 12px; font-size:40px; line-height:1.15}
+.subtitle{color:var(--muted); margin:0 0 16px}
+.video-box{
+  width:100%; aspect-ratio:16/9; border-radius:16px;
+  border:1px solid var(--line); background:linear-gradient(135deg,#17202d,#0e1420);
+  display:grid; place-items:center; color:var(--muted);
+}
+.controls{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:12px}
+.btn{display:inline-block; border:0; cursor:pointer; font-weight:800; text-decoration:none;
+  padding:12px 14px; border-radius:12px; background:linear-gradient(180deg,var(--accent),var(--accent-2)); color:#13210a}
+.btn-outline{padding:11px 14px; border-radius:12px; border:1px solid #2a3748; background:#0f141b; color:var(--text)}
+.controls input[type="range"]{width:160px}
+
+/* Section grid kartu */
+.section{margin:32px 0}
+.section h2{margin:0 0 12px}
+.cards{display:grid; gap:16px; grid-template-columns:repeat(2,1fr)}
+@media (min-width:640px){ .cards{grid-template-columns:repeat(3,1fr)} }
+@media (min-width:1024px){ .cards{grid-template-columns:repeat(6,1fr)} }
+.card{background:var(--bg-2); border:1px solid var(--line); border-radius:14px; padding:12px}
+.card h3{margin:0 0 4px; font-size:16px}
+.meta{color:var(--muted); font-size:12px; margin:0}
+
+/* Form (Login/Register) */
+.form-wrap{display:grid; place-items:center; padding:32px 16px}
+.form{
+  width:100%; max-width:440px; background:var(--bg-2); border:1px solid var(--line);
+  border-radius:16px; padding:22px;
+}
+.form h1{font-size:28px; margin:0 0 8px}
+.form p{margin:0 0 16px; color:var(--muted)}
+.row{margin-bottom:12px}
+label{display:block; font-size:13px; color:var(--muted); margin:0 0 6px}
+.input{width:100%; padding:12px 14px; border-radius:12px; border:1px solid #2a3748; background:#0f141b; color:var(--text)}
+.muted{text-align:center; color:var(--muted); font-size:12px; margin-top:10px}
+.btn-google{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  width:100%; padding:12px 14px; border-radius:12px; border:1px solid #e0e4ea;
+  background:var(--white); color:var(--black); font-weight:800;
+}
+.g-logo{width:18px;height:18px;border-radius:3px;background:
+  conic-gradient(from 45deg,#4285F4 0 25%,#34A853 0 50%,#FBBC05 0 75%,#EA4335 0 100%)}
+
+/* Footer */
+footer{color:var(--muted); border-top:1px solid var(--line); margin-top:32px; padding:16px 0}
+.footer-grid{display:grid; gap:16px}
+@media (min-width:1024px){ .footer-grid{grid-template-columns:repeat(4,1fr)} }
+.footer-grid a{color:var(--muted); text-decoration:none}
+.footer-grid a:hover{text-decoration:underline}

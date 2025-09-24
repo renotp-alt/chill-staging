@@ -1,1 +1,117 @@
-<h1>Hello World</h1>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chill — Beranda</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header: logo, nav, avatar -->
+  <header class="header">
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span><span>Chill</span></div>
+      <nav class="menu" aria-label="Navigasi utama">
+        <a class="current" href="index.html" aria-current="page">Beranda</a>
+        <a href="#">Series</a>
+        <a href="#">Film</a>
+        <a href="#">Daftar Saya</a>
+        <span class="avatar" aria-label="Avatar profil"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- SECTION 1: Hero (grid 12 — teks 5 kolom, media 7 kolom di desktop) -->
+    <section class="grid-12" style="margin:24px 0">
+      <div style="grid-column: span 12; margin-bottom: 8px">
+        <span class="kicker">Film & Series</span>
+      </div>
+
+      <div style="grid-column: span 12">
+        <!-- pada desktop: teks 5 kolom -->
+        <div class="grid-12">
+          <div style="grid-column: span 12; padding-right:0">
+            <h1>Siap untuk nonton?</h1>
+            <p class="subtitle">Preview film, tombol mulai & kontrol volume — sesuai brief.</p>
+            <div class="controls">
+              <a class="btn" href="#">Mulai</a>
+              <a class="btn-outline" href="#">Selengkapnya</a>
+              <label for="vol" class="muted">Volume</label>
+              <input id="vol" type="range" min="0" max="100" value="60">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Media hero di bawah pada mobile; berdampingan di desktop -->
+      <div style="grid-column: span 12; margin-top:12px">
+        <div class="video-box">Preview Video (placeholder)</div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Lanjutkan menonton -->
+    <section class="section">
+      <h2>Lanjutkan Menonton</h2>
+      <div class="cards">
+        <article class="card"><h3>Film A</h3><p class="meta">50% • Aksi</p></article>
+        <article class="card"><h3>Series X Ep.3</h3><p class="meta">30% • Sci-Fi</p></article>
+        <article class="card"><h3>Film B</h3><p class="meta">10% • Drama</p></article>
+        <article class="card"><h3>Series Y Ep.7</h3><p class="meta">75% • Komedi</p></article>
+        <article class="card"><h3>Film C</h3><p class="meta">60% • Thriller</p></article>
+        <article class="card"><h3>Series Z Ep.2</h3><p class="meta">15% • Misteri</p></article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Top rating hari ini -->
+    <section class="section">
+      <h2>Top Rating Hari Ini</h2>
+      <div class="cards">
+        <article class="card"><h3>Judul 1</h3><p class="meta">⭐ 9.2</p></article>
+        <article class="card"><h3>Judul 2</h3><p class="meta">⭐ 9.0</p></article>
+        <article class="card"><h3>Judul 3</h3><p class="meta">⭐ 8.9</p></article>
+        <article class="card"><h3>Judul 4</h3><p class="meta">⭐ 8.8</p></article>
+        <article class="card"><h3>Judul 5</h3><p class="meta">⭐ 8.7</p></article>
+        <article class="card"><h3>Judul 6</h3><p class="meta">⭐ 8.6</p></article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Trending -->
+    <section class="section">
+      <h2>Trending</h2>
+      <div class="cards">
+        <article class="card"><h3>#1</h3><p class="meta">Thriller</p></article>
+        <article class="card"><h3>#2</h3><p class="meta">Romansa</p></article>
+        <article class="card"><h3>#3</h3><p class="meta">Aksi</p></article>
+        <article class="card"><h3>#4</h3><p class="meta">Misteri</p></article>
+        <article class="card"><h3>#5</h3><p class="meta">Drama</p></article>
+        <article class="card"><h3>#6</h3><p class="meta">Komedi</p></article>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Rilis baru -->
+    <section class="section">
+      <h2>Rilis Baru</h2>
+      <div class="cards">
+        <article class="card"><h3>Baru 1</h3><p class="meta">Film • 110m</p></article>
+        <article class="card"><h3>Baru 2</h3><p class="meta">Series • 6 eps</p></article>
+        <article class="card"><h3>Baru 3</h3><p class="meta">Film • 98m</p></article>
+        <article class="card"><h3>Baru 4</h3><p class="meta">Series • 8 eps</p></article>
+        <article class="card"><h3>Baru 5</h3><p class="meta">Film • 102m</p></article>
+        <article class="card"><h3>Baru 6</h3><p class="meta">Series • 10 eps</p></article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div><strong><span class="dot"></span> Chill</strong><br>© 2025 Chill.</div>
+      <div><strong>Genre Film</strong><br><a href="#">Aksi</a><br><a href="#">Drama</a><br><a href="#">Komedi</a></div>
+      <div><strong>Bantuan</strong><br><a href="#">FAQ</a><br><a href="#">Kontak Kami</a></div>
+      <div><strong>Legal</strong><br><a href="#">Privasi</a><br><a href="#">Syarat & Ketentuan</a></div>
+    </div>
+  </footer>
+</body>
+</html>
+
